@@ -1,0 +1,833 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="style.css">
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+
+    <div class="a1">
+    <h2 class="a2">PRODUCTS</h2>
+    <div class="container">
+      <div class="row" id="productList"></div>
+  </div>
+  
+
+        
+        <select id="category" class="form-select">
+            <option value="">-- Select Category --</option>
+            <option value="Handbag">Handbag</option>
+            <option value="sunglasses">sunglasses </option>
+            <option value="Wrist Watch">Wrist Watch </option>
+            <option value="Earrings">Earrings </option>
+            <option value="Necklace">Necklace</option>
+            <option value="Bracelet">Bracelet </option>
+            <option value="Hair Band">Hair Band </option>
+            <option value="Clutch Purse">Clutch Purse </option>
+            <option value="Anklet">Anklet </option>
+            <option value="Scarf">Scarf </option>
+
+            
+            
+            
+        </select>
+        
+    </div>
+
+
+    <script type="application/json" id="productData" class="a4">
+      {
+        "products":[
+        {
+          "prodId": 1,
+          "prodName": "Handbag",
+          "category": "Handbag",
+          "price": 1500,
+          "image":"https://zouk.co.in/cdn/shop/files/WavBeach_Women_s_Office_Bag_2.jpg?v=1765957214&width=1000",
+          "description": "Stylish and spacious handbag perfect for daily use and casual outings."
+        },
+        {
+            "prodId": 2,
+            "prodName": "Handle bag",
+            "category": "Handbag",
+            "price": 2134,
+            "image":"https://www.esbeda.com/wp-content/uploads/2025/11/7952-White.jpg",
+            "description":"Esbeda White Color Regalmint Embroidered Top-Handle Bag."
+          },
+
+        {
+          "prodId": 3,
+          "prodName": "hand bag",
+          "category": "Handbag",
+          "price": 800,
+          "image": "https://shoplililo.com/cdn/shop/files/HB-002-SS25-GRY_Front.jpg?v=1760607277&width=700",
+          "description": "Contrast Curves Handbag."
+        },
+        {
+          "prodId": 4,
+          "prodName": "shoulder bag",
+          "category": "Handbag",
+          "price": 1200,
+          "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQ5ze6ay2akdIBWMg-PlNArymGLRFl1yjP6W1PgoC_K-P2zirASmp7_0JW_SziKmWCyFB_xDRIpMhU6fj0c-Gk6-S01atvkNmCymfwCY8OSX7BSWxZpKx_rKg",
+          "description": "Miraggio Gisele Shoulder Bag."
+        },
+        {
+          "prodId": 5,
+          "prodName": "Mandala print bag",
+          "category": "Handbag",
+          "price": 2200,
+          "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcS7anqqqB-V6BzSHkfOm5lQ0RGHpjOFSpNfkCekfnQQa5amlWadIou8zNVh-19RT-QjWp3_pLPoVCBpwBsXA0ZPNhgaNF73",
+          "description": "Zouk Multicolor Mandala Print Office Essential Bag."
+        },
+        {
+          "prodId": 6,
+          "prodName": "Women's Handbag",
+          "category": "Handbag",
+          "price": 900,
+          "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTz24IWfl_iJJx8CFIZx6aw4z96_DifNmovxJ6LEuAWbZT4vuJFyKcc324-4LAjATqsX9YUFg4LcwNw8xoAUBlFIZpTZHXRnWklTtoYC96sPsTZxC-6apdhvrw",
+          "description": "YOYOWING Women's Stylish Handbag."
+        },
+        {
+          "prodId": 7,
+          "prodName": "sling bag",
+          "category": "Handbag",
+          "price": 1000,
+          "image": "https://lucienbags.com/cdn/shop/files/IMG_7395.jpg?v=1767301406&width=1000",
+          "description": "Lucien Everyday sling bag."
+        },
+        {
+          "prodId": 8,
+          "prodName": "Tote Black",
+          "category": "Handbag",
+          "price": 1900,
+          "image": "https://www.hiestyle.com/cdn/shop/files/3_e7c5f7b3-2280-456a-9997-e3b4c63b6010.webp?v=1768997113&width=1000",
+          "description": "Sierra Shoulder Bag."
+        },
+        {
+          "prodId": 9,
+          "prodName": "shoulder bag",
+          "category": "Handbag",
+          "price": 1900,
+          "image": "https://www.silvertraq.com/cdn/shop/files/silvertraq0090_900x.jpg?v=1724751512",
+          "description": "The Traq Tote Black."
+        },
+        {
+           "prodId": 10,
+            "prodName": "Sunglasses",
+            "category": "sunglasses",
+            "price": 800,
+            "image": "https://m.media-amazon.com/images/I/71rJnI5WU4L._SX679_.jpg",
+            "description": "Trendy sunglasses that provide UV protection and enhance your look."
+          },
+          {
+            "prodId": 11,
+            "prodName": "Cat Eye Sunglasses",
+            "category": "sunglasses",
+            "price": 800,
+            "image": "https://www.chanel.com/images///c_crop,w_1.0,h_0.53,y_0.188,t_fashioncommercial_trim,f_auto,q_auto:good,dpr_1.1/w_960/-9544669233182.jpg",
+            "description": "special cat eye sunglasses."
+          },
+          {
+            "prodId": 12,
+            "prodName": "HAYDEN Women's UV400 Protective Sunglasses",
+            "category": "sunglasses",
+            "price": 800,
+            "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRSRQezODgvzqkhHhsd4u7H7tsc6gHQBZB7VfbmYKWNp_ehM4a2WQaQQGMN5HouD5bdZ6VVxUEyaoYKqQsH0wfELZO-Y8JDfafoEhorJVSQNEFjP7q-G4WBhA",
+            "description": "Women's UV protective sunglasses."
+          },
+          {
+            "prodId": 13,
+            "prodName": "Butterfly Wing Sunglasses",
+            "category": "sunglasses",
+            "price": 1200,
+            "image": "https://peeperly.in/cdn/shop/files/202502101050069686_O1CN01R6pYZ32KrtYEThk7W__2207946269611-0-cib_2_540x.jpg?v=1761733022",
+            "description": "Glam Fly Crystal Butterfly Wing Sunglasses."
+          },
+          {
+            "prodId": 14,
+            "prodName": "Oval Shades",
+            "category": "sunglasses",
+            "price": 780,
+            "image": "https://www.sunglasslover.in/cdn/shop/files/main-image-8.jpg?v=1756652213&width=990",
+            "description": "90s Vintage Designer Oval Shades."
+          },
+          {
+            "prodId": 15,
+            "prodName": "Haute sause",
+            "category": "sunglasses",
+            "price": 800,
+            "image": "https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/7/7/77885e8SS23_HSSG1217_11.jpg?rnd=20200526195200&tr=w-720",
+            "description": "Women Purple Lens Purple Round Sunglasses (50)."
+          },
+          {
+            "prodId": 16,
+            "prodName": "Lightweight sunglasses",
+            "category": "sunglasses",
+            "price": 900,
+            "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQxRzPoBodPAVh7q0BRWgbSEqb1H5UxD8LWEkY_45kfwx_4-aKctFweGJihzxGvwwaEsA5P_rSAKuLWVkNmNSPm2g8cr0w6_yDoSFk6V2QQJTnSz38epyBtZg",
+            "description": "Women's Lightweight Comfortable Sunglasses."
+          },
+          {
+            "prodId": 17,
+            "prodName": "Aviator Sunglasses",
+            "category": "sunglasses",
+            "price": 800,
+            "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcR5IEhGQSq-1ByDCxaxMQ4NT-WXU-MYNJoO_g2H9NQqpS0K_OIOoInqqn_Y7eN7MJLqL9zE4-C0sNu51sAPCabPsSgVMR0ofdzqRW1KbIw",
+            "description": "Gold Half Frame Aviator Sunglasses."
+          },
+          {
+            "prodId": 18,
+            "prodName": "ANTON SUNGLASS",
+            "category": "sunglasses",
+            "price": 1800,
+            "image": "https://phuljhadi.com/cdn/shop/files/3C430D02-40CE-44B8-A5DF-9BB256AC8133.jpg?v=1761040545&width=990",
+            "description": "Oversized protective sunglasses."
+          },
+
+        {
+          "prodId": 19,
+          "prodName": "Wrist Watch",
+          "category": "Wrist Watch",
+          "price": 2500,
+          "image": "https://m.media-amazon.com/images/I/61-ELXAXhNL._SX679_.jpg",
+          "description": "Elegant wrist watch with a modern design suitable for all occasions."
+        },
+        {
+            "prodId": 20,
+            "prodName": "Straps Analogue Watch",
+            "category": "Wrist Watch",
+            "price": 2200,
+            "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTBO2A-h2nDQvJ9i6DzU4XOsCUI3UbKM5_2tyIP9ToVUPcTO0g4ptGvdWud-LXqVTFHA0hWkX1hRZUdbfHOcIQYSwhb09GojXr1wI1Py24",
+            "description": "Adorable straps watch."
+          },
+          {
+            "prodId": 21,
+            "prodName": "Round Studded watch",
+            "category": "Wrist Watch",
+            "price": 1400,
+            "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRj0Jcmot_GZykiMc7V96bLKCyed6HLjq-dg6y8lbNn0X6Sf2OpF2epIOg5EvJTyYmYDEItT7_7HBuBcHH5dznmVjyndDmF",
+            "description": "Round studded watch Elegant."
+          },
+          {
+            "prodId": 22,
+            "prodName": "Jocker and Witch",
+            "category": "Wrist Watch",
+            "price": 2200,
+            "image": "https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/2/1/212b5daAMWW617_1.jpg?rnd=20200526195200&tr=w-720",
+            "description": "Joker & Witch Athens Black Dial Rosegold Metallic Watch."
+          },
+          {
+            "prodId": 23,
+            "prodName": "Wrist watch for girls",
+            "category": "Wrist Watch",
+            "price": 1000,
+            "image": "https://www.fastrack.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dwa0f372bc/images/Fastrack/Catalog/FV60045WM01W_1.jpg?sw=600&sh=600",
+            "description": "Fastrack Vyb Striker Quartz Analog Rose Gold Dial Rose Gold Metal Strap Watch For Girls."
+          },
+          {
+            "prodId": 24,
+            "prodName": "Analog Watch",
+            "category": "Wrist Watch",
+            "price": 2200,
+            "image": "https://carltonlondonbeauty.com/cdn/shop/files/1_1_1.jpg?v=1770365575&width=1000",
+            "description": "Women Rose Gold/Green Analog Watch - CLSSCDGRN."
+          },
+          {
+            "prodId": 25,
+            "prodName": "Watch-FunkyTradition",
+            "category": "Wrist Watch",
+            "price": 1600,
+            "image": "https://d1311wbk6unapo.cloudfront.net/NushopCatalogue/tr:f-webp,w-1200,fo-auto/64b7c91d3a2c4600127d44a9/cat_img/Royal_Look_Gold_Plated_Crystal_Studded_Bracelet_Watch_C19PT1D2T2_2025-12-30_2.png",
+            "description": "Royal look gold plated crystal studded bracelet watch."
+          },
+          {
+            "prodId": 26,
+            "prodName": "Wrist Watch",
+            "category": "Wrist Watch",
+            "price": 1100,
+            "image": "https://vintagevelvetonline.com/cdn/shop/files/rn-image_picker_lib_temp_43673bfc-6dde-4c40-b3ba-d060d3d6cd3c.jpg?v=1766645008&width=990",
+            "description": "Pretty Pastel Ladies Wrist Watch."
+          },
+          {
+            "prodId": 27,
+            "prodName": "Stylish Stainless Steel strap",
+            "category": "Wrist Watch",
+            "price": 2400,
+            "image": "https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/8/0/80e9903GZ6008733_1.jpg?rnd=20200526195200&tr=w-720",
+            "description": "Sleek Dial with Unique Chain-link Bracelet and Stylish Stainless Steel strap (M)."
+          },
+        {
+          "prodId": 28,
+          "prodName": "Earrings",
+          "category": "Earrings",
+          "price": 600,
+          "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcS_hZSWfYm33yro7nWEPv2_mkq6UEZmURvlbi7AkWQIkLTcN5TedPeAqvl0bp7hK49z4ZPtF6YLGWUgfkbCsBCUSF0NfonruFKM7Gqo0MU6gyZuk4g3TsKl",
+          "description": "Beautiful earrings that add charm and elegance to your outfit."
+        },
+        {
+            "prodId": 29,
+            "prodName": "Gold-coloured Stud Earrings",
+            "category": "Earrings",
+            "price": 900,
+            "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQa0_ZcgqDKou_sVN73Ah2bBRIAlmHl1kX30JfKp-boVNqTVisA0MYTp8Ocv-ndOAhH2s-KZjokXTYnK0WFVqX_tsN903J3ksGObcI2UJo-b6Jj3Jvx70PDpw",
+            "description": "Beautiful earrings that add charm and elegance to your outfit."
+          },
+          {
+            "prodId": 30,
+            "prodName": "Contemporary Oxidised Drop Earrings",
+            "category": "Earrings",
+            "price": 700,
+            "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTVgL4iRbOpyBIYINZsZQcpSlNbJEfjERpvn7NozVs-MfVu1_1TXE41rsqcSYB6IvIIfWkdtjrdq6MYotgslcWOS7A4iIe595UkoDJgZmj8",
+            "description": "Beautiful earrings that add charm and elegance to your outfit."
+          },
+          {
+            "prodId": 31,
+            "prodName": "Butterfly studs",
+            "category": "Earrings",
+            "price": 900,
+            "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTOEWw5iilVY67MdxRSD7P9_22_YMfaMpG87VGoKOcJHwvcZs_nGIvJqMDC8wTsZWdKlJ1eoeIF5J3ufLX383zl5qdNtMeR7-WM5qoGB1Mz2NjlqSlK9HPc1A",
+            "description": "In the land of butterflies-Korean earrings ."
+          },
+          {
+            "prodId": 32,
+            "prodName": "Pearl Earrings",
+            "category": "Earrings",
+            "price": 1100,
+            "image": "https://jewelsmars.com/cdn/shop/files/50D83CC7-1249-4163-A1CA-EF797342D123.jpg?v=1723183286&width=533",
+            "description": "Pearl-fect bow & pearl earrings."
+          },
+          {
+            "prodId": 33,
+            "prodName": "Hoop Earrings",
+            "category": "Earrings",
+            "price":1200,
+            "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRkPV_9veA2fTqF3yZsoQ6MQL2lpMh_siykkDq3-5KDGAAYhqH3VV0BEnUSFGJnGf-1oCY1mBWH981rsB3lzRorHLlz0yG4_s6gLyrio5qsfbRoTSHDrOlsiQ",
+            "description": "You glow girl! Earrings."
+          },
+          {
+            "prodId": 34,
+            "prodName": "Golden open HOOPS",
+            "category": "Earrings",
+            "price": 1300,
+            "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQFQIZjXMwj5YyPvErv4tjwaqS1qzwZ0dTujMQR6lIcgVoWxn0SQDTtBFHPr7O061XEmm0_5IzYr3VukcQs28YUaLfBcMuC8a-oTSlTKfoHEQ2IckCb2Rrr",
+            "description": "TRIPLE LAYER OPEN HOOPS-golden."
+          },
+          {
+            "prodId": 35,
+            "prodName": "Stud Earrings",
+            "category": "Earrings",
+            "price": 1500,
+            "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQcsTc9kwFAwuqpRRkrai52LQjHChIbtRFYsanlIhyiQHudJRT0ytkzKowS1hdbI2ErfeN8AnPRDi142kc3nlL5drvs85M3dDXSxKV9zYg",
+            "description": "Effortless Era stud Earrings."
+          },
+          {
+            "prodId": 36,
+            "prodName": "BOW Earrings",
+            "category": "Earrings",
+            "price": 1400,
+            "image": "https://jewelsmars.com/cdn/shop/files/PartyBowEarrings...jpg?v=1710147132&width=533",
+            "description": "Party bow earrings."
+          },
+         {
+          "prodId": 37,
+          "prodName" : "Necklace",
+          "category" : "Necklace",
+          "price": 1200,
+          "image": "https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/5/e/5e05cffDY-PS-26395_1.jpg?rnd=20200526195200&tr=w-720",
+          "description": "Attractive necklace designed to complement both traditional and western wear."
+        },
+        {
+            "prodId": 38,     
+            "prodName": "Heart Magnetic Clover Necklace",
+            "category": "Necklace",
+            "price": 1900,
+            "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRCvJtqtasgjdzLuZlPsziuqROn5K5B4ZM_U6I99X8V8BZ1p952KiCYQB0LC6ZYFCicXdWqIKEUt0Kh6GGQBEpQQffqPzCNx7lLisRilReUk7xD0BOQgBU1",
+            "description": "Attractive necklace designed to complement both traditional and western wear."
+          },
+          {
+            "prodId": 39,
+            "prodName": "Elegant Silver Plated Butterfly Pendant",
+            "category": "Necklace",
+            "price": 2100,
+            "image": "https://rukminim2.flixcart.com/image/2560/2560/xif0q/necklace-chain/n/q/s/1-silver-blue-dm-butterfly-01-necklace-vr-divine-adorn-original-imahg3ngsdyy6drv.jpeg?q=90",
+            "description": "Attractive necklace designed to complement both traditional and western wear."
+          },
+          {
+            "prodId": 40,
+            "prodName" : "Layered Necklace",
+            "category" : "Necklace",
+            "price": 1400,
+            "image": "https://jewelsmars.com/cdn/shop/files/WhatsApp_Image_2025-04-03_at_2.29.25_PM_1.jpg?v=1744111141&width=533",
+            "description": "Gold stacks layered necklace."
+          },
+          {
+            "prodId": 41,
+            "prodName" : " Womens's gold Necklace",
+            "category" : "Necklace",
+            "price": 2200,
+            "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcQKU8NzsceuryLzCmQrLSy2i8EUGVzZ5_yq3xwQTIIbA3NIxZOIQ3QkgEh0Cm2VkFGMhFsPaGUjcX6Nv0AgCiZ3142hvbl7qVbvXNJ_WeM",
+            "description": "SOHI Women's Gold Statement Necklace."
+          },
+          {
+            "prodId": 42,
+            "prodName" : "Crystal fashion Necklace",
+            "category" : "Necklace",
+            "price": 1100,
+            "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQa-cH1deqAjG2LnA2ZmI9gg4N9fhGvBjEkSAT4ByvN8Y4xHQEpHw5QzSrTc-J3F2qutFHlQVhnoJyGRjZ63AuS5ZtWGBp6yg",
+            "description": "Gold & White Multi Layered Multi- Strand Crystal Fashion Necklace."
+          },
+          {
+            "prodId": 43,
+            "prodName" : "Charm Necklace",
+            "category" : "Necklace",
+            "price": 700,
+            "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQ17jwj_6j9I41H46vn3nXS31S3m5LUL3Gdug3PrcrWLEN8MHEO0Dyif7cwQEVjfNAm7hxa2lxqTxCEpstqES6lfKF1Vv-UUA",
+            "description": "Amorenmore Trinity Charm Necklace."
+          },
+          {
+            "prodId": 44,
+            "prodName" : "Minimal Necklace",
+            "category" : "Necklace",
+            "price": 2300,
+            "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQqgubbHgCcdpSY03oVdtHdfe6zipAKn-UxmRn6kZWLA6q6P_-l-EebKNJ1uUDKCpbLNfpdryQlr3_6_6AUIIJAPYgy0iQWoqJ9Nrlz7zY",
+            "description": "Shining Diva Fashion Gold-Plated Minimal Necklace."
+          },
+          {
+            "prodId": 45,
+            "prodName" : "Pendant",
+            "category" : "Necklace",
+            "price": 1400,
+            "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQt22X0d-vR_ixTv1NYcRwpHVZt9tFHDDz5gRe4cl0qvb_4dbsTiP_ALMDYa6nEfdvRQBMPzGtAc9F8LF1YvtFIM-x5DJdjhxevIVLabJ0",
+            "description": "Starfish Pendant Necklace."
+          },
+        {
+          "prodId": 46,
+          "prodName": "Bracelet",
+          "category": "Bracelet",
+          "price": 700,
+          "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcScwhsmq12yi1FVNrI2tcYlHB6mhHjzQUu-RqiQMBkeTPCxNreK6yISeWcWLiAbqCE1rLhflgpp8X0kUWsPGQlnYiHZPnmhZbQclLz508I-nonXR1fmOzZq9g",
+          "description": "Fashionable bracelet that adds a stylish touch to your wrist."
+        },
+        {
+            "prodId": 47,
+            "prodName": "Shining Diva Fashion Stylish Bracelet",
+            "category": "Bracelet",
+            "price": 900,
+            "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRp8WWgKqONKVraOFtI69eniaQbVBmebjiBxbBnTSzH1srENcpb0z6acBCQy9e_bWCQ6H__CWu3EJcP89BK1xv84Z2q0mpSHI6ugE9CzXGkRmKQVLLvoGbzDQ",
+            "description": "Fashionable bracelet that adds a stylish touch to your wrist."
+          },
+          {
+            "prodId": 48,
+            "prodName": "Infinity Shape",
+            "category": "Bracelet",
+            "price": 1900,
+            "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQOqcOAgbXMQAo_AbYMX21hZsE9KGJGfc0Abszoks-NGjFG1NkSR2AMPcYH_JZ_3izf2lISBqHWTWF3DdPUtECi5-YKXGiFgTJjK_ul7sGzX-byDIjscRC3CA",
+            "description": "Fashionable bracelet that adds a stylish touch to your wrist."
+          },
+          {
+            "prodId": 49,
+            "prodName": "Charm Bracelet",
+            "category": "Bracelet",
+            "price": 900,
+            "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSqFbtZZgKHMbR3bu85Zx15bW7-yEzXwOWd10uusFHXNO2FldF4SGBnlxOpTod-TjU3VgRn8Nz0VSl0ylz1r3_eULzGqYFuJw",
+            "description": "Vembley Flower Charm Bracelet (Rose Gold)."
+          },
+          {
+            "prodId": 50,
+            "prodName": "Station bracelet",
+            "category": "Bracelet",
+            "price": 500,
+            "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTYsYaWNM44O28Hzw-e0QkF04WfeQLGLXHxqbnGP1dNQx0FUbjzcG0M003uZuEuE7SPS5BTsBdkXNHIzyR5ItNEMWEP45SgOw",
+            "description": "Gold star station bracelet."
+          },
+          {
+            "prodId": 51,
+            "prodName": "Party wear bracelet",
+            "category": "Bracelet",
+            "price": 900,
+            "image": "https://assets.ajio.com/medias/sys_master/root/20240613/xvfO/666ce39b1d763220fab79d5d/-1117Wx1400H-465524606-gold-MODEL.jpg",
+            "description": "Women's Gold Plated Party Designer Charms Bracelet."
+          },
+          {
+            "prodId": 52,
+            "prodName": "Bracelet",
+            "category": "Bracelet",
+            "price": 1100,
+            "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTNa1fG66yhFMqGj74osL0WhkAoBZtHLPHzFKZEJYLJqZIlGrOXAGajicMJ1hQALnoCW3iv5KxaZh9OkWo0te_aSm0U29xWp36JMzJ6MWtDS9eiBi2AlZl4nw",
+            "description": "Designer Gold Plated Bracelet Set of 5."
+          },
+          {
+            "prodId": 53,
+            "prodName": "Korean bracelet",
+            "category": "Bracelet",
+            "price": 1200,
+            "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRTTZ4Cft7ZVkZWomDXrD5D-i4pCDOByswXW0tWdH843uw2sMg-NiOIpl6LHRkZJ9gJJI_qv8kxdpdSkuei1RpUTjF_4uyFvw",
+            "description": "Jewels Galaxy Star Inspired Stone Studded Korean Bracelet."
+          },
+          {
+            "prodId": 54,
+            "prodName": "Gold hand chain",
+            "category": "Bracelet",
+            "price": 1700,
+            "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcST5086r8y7AqmFUcNYCJqYmK7IBXRNMpN8_yewHaR-AIya3BViC9DqDrTCJyw9EJDfwIyZhj8EuwFSuU5bIWrRbzuhb7ECgSROW9zukmRfZN6-OC8wZu6R14Y",
+            "description": "gold Hand Chain Ring Bracelet for Women Dainty Gold Finger Chain."
+          },
+        {
+          "prodId": 55,
+          "prodName": "Hair Band",
+          "category": "Hair Band",
+          "price": 300,
+          "image": "https://floristaabymahek.com/cdn/shop/files/AKP01687copy_Custom.jpg?v=1747255036&width=5000",
+          "description": "Comfortable and trendy hair band suitable for everyday use."
+        },
+        {
+            "prodId": 56,
+            "prodName": "Candance Hair Band",
+            "category": "Hair Band",
+            "price": 2100,
+            "image": "https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/8/9/8944c79YCHAVN-241CRY-WH_1.jpg?rnd=20200526195200&tr=w-720",
+            "description": "Comfortable and trendy hair band suitable for everyday use."
+          },
+          {
+            "prodId": 57,
+            "prodName": "Rosemary Flat Hair Band - Pink",
+            "category": "Hair Band",
+            "price": 300,
+            "image": "https://hairdramacompany.com/cdn/shop/files/HD-218.jpg?v=1752140747",
+            "description": "Comfortable and trendy hair band suitable for everyday use."
+          },
+          {
+            "prodId": 58,
+            "prodName": "Kundan Hair Band",
+            "category": "Hair Band",
+            "price": 1300,
+            "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcT7osM50PaNMJizJzQyC76iR_LZHuN5bKMSL-LCryRuQXptowyHzri_hBPJ9PQvY2rCrCaKpXXfsAEdEbqu7uva3lnPmdTgQiOfUGqIG2YO0_y2iZkBkfwN",
+            "description": "Karatcart Women's Floral Design Drop Kundan Hairband."
+          },
+          {
+            "prodId": 59,
+            "prodName": "Beaded Hair Band",
+            "category": "Hair Band",
+            "price": 1100,
+            "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQRUZRcVh7kSnbYX-46956GN5xvNX8MUfqFZK3wn4pFriyuofbJRQgtRvjENj4FB5_ww0izd7XNMhsgKRFKx_MtAdAM61X8uIclJRFycQzBZGCiWIVXaaeB4Q",
+            "description": "Silvermerc Women's Gold Toned Beaded Hair Band Accessory Set."
+          },
+          {
+            "prodId": 60,
+            "prodName": "Hair Band",
+            "category": "Hair Band",
+            "price": 800,
+            "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRcmsd_rWhAb45A9L8zitRYh_rj98NGBesUsSPVd6LAIPedb3OXQ8EyK24-q-ElCs1Njbt2rOHL4_cmeRIGyHnFOXpLOpaa0731Ti3iTouhcBUep_p_IQ8U",
+            "description": "Forever Glam Women's Hair ."
+          },
+          {
+            "prodId": 61,
+            "prodName": "Contemporay Hair Band",
+            "category": "Hair Band",
+            "price": 1200,
+            "image": "https://img.tatacliq.com/images/i17/1348Wx2000H/MP000000021707216_1348Wx2000H_202403281240311.jpeg",
+            "description": "Zaveri Pearls Pink Rhinestones Embellished Contemporary HairBand-ZPFK14502."
+          },
+          {
+            "prodId": 62,
+            "prodName": "Head Band",
+            "category": "Hair Band",
+            "price": 800,
+            "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQ8sRSAVuxQD5CXvSIDdXCd2ViWBZaofphvwFj3_9ALidXxz_UEO73i-uTXFMFpxFVKRaho8NNGh0f_Gc4N6xwRpzB8INON",
+            "description": "FAMES FOREVER Assorted Head Bands."
+          },
+          {
+            "prodId": 63,
+            "prodName": " Bow Hair Band",
+            "category": "Hair Band",
+            "price": 300,
+            "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSCEvua_nJZAvUyCK8tykTU7xuw-2jue-XG4v44dmQYrtwfDuuz_d1A-3WeKaepBJJ0oQduOSjUZgs35UwntOvHmINnIk4HGw",
+            "description": "The Bow Hairband."
+          },
+        {
+          "prodId": 64,
+          "prodName": "Clutch Purse",
+          "category": "Clutch Purse",
+          "price": 1800,
+          "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSXjxD7xbaU8Y841zfCtuGBTh3Nn2R1fCEnHvroA6KL7giPjrrTIaM8t2mTHzsKBSuHKyxXl7ad50RlrQLfPphlKGEOwT0U-YdEhzt39vXqHyR8uArjUeuzh58",
+          "description": "Elegant clutch purse ideal for parties, weddings, and special occasions."
+        },
+        {
+            "prodId": 65,
+            "prodName": "Women's Handbag",
+            "category": "Clutch Purse",
+            "price": 1200,
+            "image": "https://m.media-amazon.com/images/I/91bku7FfAlS._SY625_.jpg",
+            "description": "Elegant clutch purse ideal for parties, weddings, and special occasions."
+          },
+          {
+            "prodId": 66,
+            "prodName": "Sangria Printed Box Clutch",
+            "category": "Clutch Purse",
+            "price": 1800,
+            "image":"https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcT_a8njDUfHAoH5dezhghnI_ci_2ShPvF6LZ5kb7LynljKWrLLMQTxTLAEwY84PDItEQ8qtKzQ0Vpx8hoByAqkglf65FYEv4ZYlZbAJQcIprwPHeUxtxy7P",
+            "description": "Elegant clutch purse ideal for parties, weddings, and special occasions."
+          },
+          {
+            "prodId": 67,
+            "prodName": "Framed Clutch",
+            "category": "Clutch Purse",
+            "price": 1100,
+            "image":"https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTCwTb7VlPnSW2hbEbIyzl9QrF6X5KJi1T8FsK7hh6tB1N8fc2852iZmcHAcdzP5Ip72E0EfVSfEpiZtqYE8gXIy8FCkSrcHjHWwMkyP2ghRX8xOpQg3A77bPQ",
+            "description": "Lavie Women's Sparkle Framed Clutch."
+          },
+          {
+            "prodId": 68,
+            "prodName": "Edit  Clutch",
+            "category": "Clutch Purse",
+            "price": 1700,
+            "image":"https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTY03xR3NW1XcpUBrgoT8NmvMS1v5cS03Kg30EvXsZ6i9lc0Wx_ucJip0WogpUByRpmVim3Zij2YBekJTUxi_aG7qvH03R06Q",
+            "description": "Nykaa Party Edit Clutch."
+          },
+          {
+            "prodId": 69,
+            "prodName": "Embroidery Clutch",
+            "category": "Clutch Purse",
+            "price": 2200,
+            "image":"https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRWMKbFa2MZOzs6HCIOZX_nsv-bGPhNqxZDBNnb8DdgzlwzaSaAqrAxzLRhgxBPpar824dup8XvebPO8PNYZUjVmG7iGKxuBC1KjMDLlN1DxF-Taj0w9X49",
+            "description": "Artklim Textured Glamour Embroidery Clutch."
+          },
+          {
+            "prodId": 70,
+            "prodName": "Clutch bag",
+            "category": "Clutch Purse",
+            "price": 1100,
+            "image":"https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTvUm5NCugZ0vjxPTl7xQTTbOZPtmrT41CSdh0fGYRdCx5OAQe6l5MNOFtL0QIzNOVQevnx7ddM8cwdMruQAuut7W6o_FQ43kiuhkcBssKFYpiOXCwE4LGEWC8",
+            "description": "shhaara Buy Womens Partywear Clutch Bag Online."
+          },
+          {
+            "prodId": 71,
+            "prodName": "Wave Clutch",
+            "category": "Clutch Purse",
+            "price": 1400,
+            "image":"https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRYvPpMEYM1npQiNX8e01cmMR1UrjSFnQovofKV7odIsAOFtAwpIqIr1Rtp65aj3khmYhp4egNQym-mRAssh99bhG3Q-CDUU8fgNe-xrdKN1IkXP3kOH1QMQg",
+            "description": "Artklim Golden Wave Embroidery Clutch."
+          },
+          {
+            "prodId": 72,
+            "prodName": "Royal black Clutch",
+            "category": "Clutch Purse",
+            "price": 1700,
+            "image":"https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcStHG3PUV6XEM2FI5MuePkx-sMXLdVY_joIqPWOzDQixtFIlX-cQ7ob3Ihy4L9RrHK2j1htJBYza1TCUUlIcUIyGoKgIqY8yS-BsbDUuXdGnH2j9TH1EpFxaQ",
+            "description": "Royal Black Sequins Embroidery D."
+          },
+        {
+          "prodId": 73,
+          "prodName": "Anklet",
+          "category": "Anklet",
+          "price": 500,
+          "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSiiNsDdlrM3SG7QvWcQ38-LH1mcnqpdlqxEfWq_K037JhNDJTrI95DSmu9sTbgQJ91e8NMtBGNrnOToD0l2cldlxeiJ7LofPo9c8epjfY",
+          "description": "Stylish anklet that enhances the beauty of your feet."
+        },
+        {
+            "prodId": 74,
+            "prodName": "Chain Anklet",
+            "category": "Anklet",
+            "price": 800,
+            "image": "https://cdn.eternz.com/thumbnails/products/ZLA-1029-4N_0731c77a_thumbnail_1024.jpg",
+            "description": "Stylish anklet that enhances the beauty of your feet."
+          },
+          {
+            "prodId": 75,
+            "prodName": "Dainty Heart of Desire Anklet",
+            "category": "Anklet",
+            "price": 700,
+            "image": "https://everstylish.com/media/catalog/product/cache/689aad3dff30df62a7b33021fe130799/j/e/jew221077-m1-1.jpg",
+            "description": "Stylish anklet that enhances the beauty of your feet."
+          },
+          {
+            "prodId": 76,
+            "prodName": "Charm Anklet",
+            "category": "Anklet",
+            "price": 800,
+            "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSfP0VPac_U5HXdJL9yJDUeAJctsEP7FbP6rf9jjqrIj8jxcalWMGoUriZChRySp21xDau0XzViG0iYy2tw7eUqXsGCXlpxaCCIA2_8ZsRk",
+            "description": "GIVA Women's Infinity Charm Anklet."
+          },
+          {
+            "prodId": 77,
+            "prodName": "Anklet payal single",
+            "category": "Anklet",
+            "price": 1500,
+            "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSrTMzsUbyUDxXmTcWzHY-LOGS-BEMFOGy9rH_VcFm8eGWtDhe2ii1Jvvaaeg3gMDdQEauv7I80WsoUV20wCdZQOAgXjYdD",
+            "description": "Clara Women's Adjustable Chain Anklet Payal Single."
+          },
+          {
+            "prodId": 78,
+            "prodName": "silver Anklet",
+            "category": "Anklet",
+            "price": 1200,
+            "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcT4a1LUm3mJOpzFSJKZMkELbPYu42ZwrGq5V3YyTvWT9qwGShV16OLod_6l1aD52c4oxHXrjsP_U2bx2V6EkrnUWv5mOJOrHA",
+            "description": "Silver Leaf Anklet Pair."
+          },
+          {
+            "prodId": 79,
+            "prodName": "Anklet",
+            "category": "Anklet",
+            "price": 800,
+            "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcS4TFEJLejDI8emsmO3PSbveU__hpkSEsW6qYEHPtAe9oQFhh6S2DOVC8ypp6Us46AbIhXqG4fLBG4OiVe1mrnLi4MnxJLiCEyj27vOdBE",
+            "description": "Rose Gold Dusk Till Dawn Anklet Pair."
+          },
+          {
+            "prodId": 80,
+            "prodName": "Eye Anklet",
+            "category": "Anklet",
+            "price": 900,
+            "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcRw1zikOgN73BgfBhxY-hcrijTnxjSmSCKyO8P55kks2SLlDm9ux8r7qTo2q_Axnl-LV16AMQGHaYtSCWhuVCNTbM2J2KlY",
+            "description": "Star Evil Eye Anklet."
+          },
+          {
+            "prodId": 81,
+            "prodName": "Plated Anklet",
+            "category": "Anklet",
+            "price": 1000,
+            "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTajZhwcPuzOnVUTAKtz0jYhdwooqzpn2XXaq5JNIBlpJLcz5LrAP9khtENrZTG_Lo95LCWt--2qHcMgwYSjPu5241Nagax4yyiYMPKHWw",
+            "description": "Women's Silver-Plated Anklet."
+          },
+        {
+          "prodId": 82,
+          "prodName": "Scarf",
+          "category": "Scarf",
+          "price": 650,
+          "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSQFgGlHiTA0UuhNJ-UgO765dnvOAwYJXPRvIyDwruPOMmD0RCF0I6QaLcjYjWl7LtXQ0w2ITC8chNGEVT2BtEGrlMEsJTwQi_eBqD7GWyDU5lFmC3LgGnu",
+          "description": "Soft and lightweight scarf perfect for all seasons and outfits."
+        },
+          {
+            "prodId": 83,
+            "prodName": "Blue Chiffon Printed Scarf",
+            "category": "Scarf",
+            "price": 650,
+            "image": "https://adn-static1.nykaa.com/nykdesignstudio-images/pub/media/catalog/product/7/a/7a4603eCKCFPTurquoiseBlue_1.jpg?rnd=20200526195200&tr=w-720",
+            "description": "Soft and lightweight scarf perfect for all seasons and outfits."
+          },
+          {
+            "prodId": 84,
+            "prodName": "Embroidered Silk Stole",
+            "category": "Scarf",
+            "price": 650,
+            "image": "https://vintagevelvetonline.com/cdn/shop/files/rn-image_picker_lib_temp_ccac1807-894b-4060-acc6-ae509d85bb31.jpg?v=1752034688&width=990",
+            "description": "Soft and lightweight scarf perfect for all seasons and outfits."
+          },
+          {
+            "prodId": 85,
+            "prodName": "Scarf",
+            "category": "Scarf",
+            "price": 900,
+            "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQqBeKOl_UD_SZhCrzuqfHVgSuEFcGb5QIlWxo0NYo9PDsor_r_yuqRwi1UG4UYMFfrEo9OtpaiCx7nHBZdMQb2Wmb1ouJjyhWus8RYk0sqCZue8RzQE5Na",
+            "description": "Multi Stripe Scarf."
+          },
+          {
+            "prodId": 86,
+            "prodName": "print Scarf",
+            "category": "Scarf",
+            "price": 1200,
+            "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcS8E4c-d6zywM6gm7dZFnre9bPtprqrTZ9Yy3QnZxWo-K3qAEP3L1ksxmF384CfiNWYYeJXjfeUfZ-Cy_EP6mljNgjmDlwb76-0b_-DvIs",
+            "description": "KE KANHA EXPORTS Scarf for Women Premium Cotton Boho | Dual Tone Border Print Stole wit."
+          },
+          {
+            "prodId": 87,
+            "prodName": "Cotton Scarf",
+            "category": "Scarf",
+            "price": 1100,
+            "image": "https://assets.ajio.com/medias/sys_master/root/20241203/Rv5X/674f03ec0f47f80c87cf14ca/-1117Wx1400H-442700145-black-MODEL.jpg",
+            "description": "Women Floral Print Cotton Scarves."
+          },
+          {
+            "prodId": 88,
+            "prodName": "Hand block Scarf",
+            "category": "Scarf",
+            "price": 1000,
+            "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcT8BaLfNsCyvU3E5Bxoa4OiTNXmGxh3lVjka1xsXkyExYqypQBlpT5vEWb2B7j1m8b-9-uKkOcU1pcqvE6UI_BoxQ5rhuF3ATXbE15FTjY",
+            "description": "Women's Floral Print Hand Block Scarf."
+          },
+          {
+            "prodId": 89,
+            "prodName": "Scarf",
+            "category": "Scarf",
+            "price": 1170,
+            "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcT1VKgHluJ5eo_EOXwcmV5m854Cm4j4N-NK41-e8hZBsTtgrIBrJhACdBUQA1pInzVMmpSTArOR6TAxQbAsRcymlczq2f5JTyKHrETBKtb5pYSdOxz4c9FeOw",
+            "description": "Cream Floral Scarf."
+          },
+          {
+            "prodId": 90,
+            "prodName": "Viscose women Scarf",
+            "category": "Scarf",
+            "price": 1500,
+            "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcT8Lk6zFldh9UoAdt6KkjBX680bIzMFOlNVKNc_qCell2hx4Z3OzRDzBkomV5Gq7i0JtSLdpWWW3jwiPKv5zvVsC7qIHWrW",
+            "description": "Honey By Pantaloons Floral Print Viscose Women Scarf."
+          }
+      ]
+    }
+        
+      
+
+</script>
+<script>
+  $(document).ready(function (){
+  
+    $("#category").change(function () {
+      let selectedCategory = $(this).val();
+      $("#productList").html("");
+  
+      if (selectedCategory !== "") {
+        let jsonData = JSON.parse($("#productData").html());
+        let output = "";
+  
+        $.each(jsonData.products, function (index, product) {
+          if (product.category === selectedCategory) {
+            output += `
+            <div class="col-md-4 mb-3">
+              <div class="card product-card h-100">
+                <img src="${product.image}" class="card-img-top">
+                <div class="card-body">
+                  <h5 class="card-title">${product.prodName}</h5>
+                  <p class="card-text">${product.description}</p>
+                  <p class="price">₹ ${product.price}</p>
+                  <div class="rating">⭐⭐⭐⭐☆</div>
+                  <button class="btn cart-btn">Add to Cart</button>
+
+                </div>
+              </div>
+            </div>`;
+          }
+        });
+        $("#productList").html(output || "<p>No products found</p>");
+
+      }
+    });
+    // ⭐ Add To Cart button click
+    $(document).on("click", ".cart-btn", function () {
+
+// random success or fail
+         let isSuccess = Math.random() > 0.5;
+
+        if (isSuccess) {
+        alert("✅ Your order placed successfully!");
+       } else {
+    alert("❌ Order failed. Please try again.");
+}
+
+});
+
+
+  
+  });
+  </script>
+  
+
+</body>
+</html>
+
+
+
+
